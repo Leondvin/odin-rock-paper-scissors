@@ -17,4 +17,17 @@ const playGame = () => {
     const randomNum = Math.floor(Math.random() * max);
     return randomNum;
   };
+  const playRound = (humanChoice, computerChoice) => {
+    if (humanChoice === computerChoice) {
+      console.log("It's a draw!");
+    } else if (humanChoice === "rock" &&  computerChoice === "scissors" ||
+      humanChoice === "paper" && computerChoice === "rock" ||
+      humanChoice === "scissors" && computerChoice === "paper") {
+        humanScore++;
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    } else {
+        computerScore++;
+        console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`);
+    }
+  };
 };

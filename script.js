@@ -7,4 +7,14 @@ const playGame = () => {
     const humanChoice = humanChoiceRaw.toLowerCase();
     return humanChoice;
   };
+  const getComputerChoice = () => {
+    const choicesArr = ["rock", "paper", "scissors"];
+    const randomIndex = getRandomNum(choicesArr.length);
+    const computerChoice = choicesArr[randomIndex];
+    return computerChoice;
+  };
+  const getRandomNum = (max) => {
+    const randomNum = Math.floor(Math.random() * max);
+    return randomNum;
+  };
 };

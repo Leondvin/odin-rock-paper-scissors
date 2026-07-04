@@ -29,5 +29,10 @@ const playGame = () => {
         computerScore++;
         console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`);
     }
+    for (let i = 1; i <= 5; i++) {
+      const humanChoice = getHumanChoice();
+      const computerChoice = getComputerChoice();
+      playRound(humanChoice, computerChoice);
+    }
   };
 };

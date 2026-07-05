@@ -35,4 +35,9 @@ const playGame = () => {
     const computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
   }
+  const winnerMessage = humanScore === computerScore ? "It's a draw game!"
+  : humanScore > computerScore ? "You win the game!"
+  : "Computer wins the game!";
+  console.log(winnerMessage);
+  console.log(`Final Score: ${humanScore} - ${computerScore}`);
 };

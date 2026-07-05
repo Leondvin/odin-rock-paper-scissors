@@ -41,3 +41,4 @@ const playGame = () => {
   console.log(winnerMessage);
   console.log(`Final Score: ${humanScore} - ${computerScore}`);
 };
+playGame();
